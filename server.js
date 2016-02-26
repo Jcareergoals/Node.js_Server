@@ -14,7 +14,7 @@ var server = http.createServer(function(request, response){
 			response.end(); 
 		}); 
 	} else if(request.url === '/stylesheets/style.css') {
-		fs.readFile('/stylesheets/style.css', 'utf8', function(errors, contents){
+		fs.readFile('stylesheets/style.css', 'utf8', function(errors, contents){
 			response.writeHead(200, {'Content-Type': 'text/css'}); 
 			response.write(contents); 
 			response.end(); 
@@ -26,7 +26,7 @@ var server = http.createServer(function(request, response){
 			response.end(); 
 		}); 
 	} else if (request.url === '/dojos/new') {
-		fs.readFile('/dojos/new.html', 'utf8', function(errors, contents){
+		fs.readFile('dojos/new.html', 'utf8', function(errors, contents){
 			response.writeHead(200, {'Content-Type': 'text/html'}); 
 			response.write(contents); 
 			response.end(); 
